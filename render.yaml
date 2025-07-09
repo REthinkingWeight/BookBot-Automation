@@ -1,9 +1,9 @@
 services:
-  - type: web
-    name: n8n
+  - type: database
+    name: n8n-db
     env: docker
     region: oregon # optional (defaults to oregon)
-    plan: standard # optional (defaults to starter)
+    plan: free
     branch: main # optional (defaults to master)
     numInstances: 1
     healthCheckPath: /
