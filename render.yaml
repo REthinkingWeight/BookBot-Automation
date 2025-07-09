@@ -1,6 +1,6 @@
 services:
-  - type: database
-    name: n8n-db
+  - type: web
+    name: n8n
     env: docker
     region: oregon # optional (defaults to oregon)
     plan: free
