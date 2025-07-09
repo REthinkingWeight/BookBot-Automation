@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: n8n-disk
+    name: n8n
     env: docker
     region: oregon # optional (defaults to oregon)
     plan: free
@@ -58,4 +58,4 @@ services:
 
 databases:
   - name: n8n-db
-    plan: basic-1gb
+    plan: free
