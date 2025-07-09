@@ -2,9 +2,9 @@ services:
   - type: web
     name: n8n
     env: docker
-    region: oregon # optional (defaults to oregon)
+    region: ohio
     plan: free
-    branch: main # optional (defaults to master)
+    branch: main
     numInstances: 1
     healthCheckPath: /
     envVars:
@@ -12,23 +12,23 @@ services:
         value: postgresdb
       - key: DB_POSTGRESDB_HOST
         fromDatabase:
-          name: n8n-db
+          name: bookbot-db
           property: host
       - key: DB_POSTGRESDB_DATABASE
         fromDatabase:
-          name: n8n-db
+          name: bookbot-db
           property: database
       - key: DB_POSTGRESDB_PORT
         fromDatabase:
-          name: n8n-db
+          name: bookbot-db
           property: port
       - key: DB_POSTGRESDB_USER
         fromDatabase:
-          name: n8n-db
+          name: bookbot-db
           property: user
       - key: DB_POSTGRESDB_PASSWORD
         fromDatabase:
-          name: n8n-db
+          name: bookbot-db
           property: password
       - key: DB_POSTGRESDB_SCHEMA
         value: public
@@ -37,9 +37,9 @@ services:
       - key: N8N_ENCRYPTION_KEY
         value: YOUR_ENCRYPTION_KEY_HERE
       - key: GENERIC_TIMEZONE
-        value: America/Sao_Paulo
+        value: America/Chicago
       - key: TZ
-        value: America/Sao_Paulo
+        value: America/Chicago
       - key: N8N_LOG_LEVEL
         value: info
       - key: EXECUTIONS_DATA_PRUNE
@@ -54,8 +54,3 @@ services:
         value: false
       - key: EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS
         value: false
-    
-
-databases:
-  - name: n8n-db
-    plan: free
