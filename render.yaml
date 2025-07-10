@@ -33,25 +33,12 @@ services:
       - key: DB_POSTGRESDB_SCHEMA
         value: public
       - key: WEBHOOK_URL
-        value: - key: WEBHOOK_URL
         value: https://bookbot-automation.onrender.com/
-      - key:   YOUR_ENCRYPTION_KEY_HERE       
-        value: 1t8EfYjk7es9D7JnJ3mzxjnnLX3ICFQEUQp4w779Wh8=     
+      - key: N8N_ENCRYPTION_KEY
+        value: 1t8EfYjk7es9D7JnJ3mzxjnnLX3ICFQEUQp4w779Wh8=
       - key: GENERIC_TIMEZONE
         value: America/Chicago
-      - key: TZ
-        value: America/Chicago
-      - key: N8N_LOG_LEVEL
-        value: info
-      - key: EXECUTIONS_DATA_PRUNE
-        value: true
-      - key: EXECUTIONS_DATA_MAX_AGE
-        value: 168
-      - key: EXECUTIONS_DATA_SAVE_ON_ERROR
-        value: all
-      - key: EXECUTIONS_DATA_SAVE_ON_SUCCESS
-        value: none
-      - key: EXECUTIONS_DATA_SAVE_ON_PROGRESS
-        value: false
-      - key: EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS
-        value: false
+databases:
+  - name: bookbot-db
+    databaseName: bookbot
+    user: bookbot
